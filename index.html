@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="sweetalert2.min.css">
+  <link rel="stylesheet" href="arindam-filters.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="html2canvas.min.js"></script>
+  <script src="sweetalert2.all.min.js"></script>
+</head>
+<body>
+
+    <div class="container mb-5">
+        <div class="col-md-8 offset-md-2 mt-5">
+            <div class="row mt-3" >
+                <div class="col-md-12 text-center">
+                    <h2><span class="hey">Hey! I'm</span> <span class="ari">Arindam</span><br/><span class="keytxt">Are you ready to <br/> check <mark>120</mark> filters for your photo.</span></h2>
+                </div>
+            </div>
+            <hr/>
+            <div class="row mt-5" id="uploadContainer">
+                <div class="col-md-12 text-center">
+                    <h3>Upload Your Photo</h3>
+                </div>
+                <div class="col-md-12 text-center">
+                    <form name="frm" id="frm">
+                        <label class="btn btn-primary btn-lg" id="photoBtn">
+                            <input type="file" id="photo" style="display: none;">
+                            Select Photo
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3" id="startAgainContainer" style="display: none;">
+                <div class="col-md-12 text-center">
+                    <button type="button" id="startAgainBtn" class="btn btn-danger btn-lg">Cancel & Upload Again?</button>
+                </div>
+            </div>
+            <div class="row mt-3" id="originalImageContainer" style="display: none;">
+                <div class="col-md-12 text-center">
+                    <h4>Your Original Photo</h4>
+                    <img id="originalPhoto" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="row mt-3" id="filterImageContainer" style="display: none;">
+                <div class="col-md-12 text-center mb-3">
+                    <h4><strong>Filters For Your Photo</strong></h4>
+                </div>
+                <div class="col-md-12 text-center mb-3">
+                    <div class="image-container-1" id="filter1">
+                        <img class="filter-image img-fluid rounded">
+                    </div>
+                    <div class="image-name">Filter - 1</div>
+                    <div class="download-box mb-3">
+                        <button type="button" class="btn btn-primary btn-sm download-btn" id="filter1">Download</button>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center mb-3">
+                    <div class="image-container-2" id="filter2">
+                        <img class="filter-image img-fluid rounded">
+                    </div>
+                    <div class="image-name">Filter - 2</div>
+                    <div class="download-box mb-3">
+                        <button type="button" class="btn btn-primary btn-sm download-btn" id="filter2">Download</button>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center mb-3">
+                    <div class="image-container-3" id="filter3">
+                        <img class="filter-image img-fluid rounded">
+                    </div>
+                    <div class="image-name">Filter - 3</div>
+                    <div class="download-box mb-3">
+                        <button type="button" class="btn btn-primary btn-sm download-btn" id="filter3">Download</button>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center mb-3">
+                    <div class="image-container-4" id="filter4">
+                        <img class="filter-image img-fluid rounded">
+                    </div>
+                    <div class="image-name">Filter - 4</div>
+                    <div class="download-box mb-3">
+                        <button type="button" class="btn btn-primary btn-sm download-btn" id="filter4">Download</button>
+                    </div>
+                </div>
+                <!--PREVIEW DOWNLOAD IMAGE-->
+                <div class="col-md-12 text-center mb-3 d-none" id="previewImg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="royfoot text-center">
+        Developed By: Arindam Roy (9836395513)
+    </div>
+
+<script>
+    $(function () {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-primary',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        });
+        $('body').on('change', '#photo', function () {
+            if (this.files && this.files[0]) {
+                var _fileName = this.files[0].name;
+                var _fileSize = this.files[0].size;
+                var _fileExtn = _fileName.split('.').pop().toLowerCase();
+                if(_fileExtn == "jpg" || _fileExtn == "png" || _fileExtn == "jpeg") {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#uploadContainer").hide();
+                        $("#startAgainContainer").show();
+                        $("#originalImageContainer").show();
+                        $("#filterImageContainer").show();
+                        $('#originalPhoto').attr('src', e.target.result);
+                        $('.filter-image').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                    Swal.fire({
+                        title: 'Please wait',
+                        html: 'Processing... Your Photo...',
+                        allowEscapeKey: false,
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        }
+                    });
+                    setTimeout(function() {
+                        Swal.close();
+                    }, 5000);
+                } else {
+                    swalWithBootstrapButtons.fire({
+                        icon: 'error',
+                        title: 'Invalid Image',
+                        text: 'Only accept .jpg or .jpeg or .png image',
+                        confirmButtonText: 'Try Another',
+                        focusConfirm: false
+                    });
+                }
+            }
+        });
+        $('body').on('click', '#startAgainBtn', function () {
+            $("#photo").val('');
+            $("#startAgainContainer").hide();
+            $("#uploadContainer").show();
+            $("#originalImageContainer").hide();
+            $("#filterImageContainer").hide();
+        });
+        $('body').on('click', '.download-btn', function () {
+            $("#previewImg").html('');
+            Swal.fire({
+                title: 'Please wait',
+                html: 'Preparing download...',
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+            setTimeout(function() {
+                Swal.close();
+            }, 3000);
+            var _filterId = $(this).attr('id');
+            html2canvas(document.getElementById(_filterId), {
+                allowTaint: true,
+                useCORS: true
+            }).then(function (canvas) {
+                var anchorTag = document.createElement("a");
+                document.body.appendChild(anchorTag);
+                document.getElementById("previewImg").appendChild(canvas);			
+                anchorTag.download = "filename.jpg";
+                anchorTag.href = canvas.toDataURL();
+                anchorTag.target = '_blank';
+                anchorTag.click();
+            });
+        }); 
+    });
+</script>
+</body>
+</html>
