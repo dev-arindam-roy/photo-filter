@@ -8,7 +8,7 @@
     color: #007bff;
 }
 .keytxt {
-    font-size: 20px;
+    font-size: 16px;
     color: #ff7426;
     font-weight: bold;
 }
@@ -31,6 +31,18 @@
     background: #0062cc;
     padding-top: 6px;
     padding-bottom: 6px;
+}
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+@media(max-width: 768px) {
+  .modal-dialog {
+    min-height: calc(100vh - 20px);
+  }
 }
 /* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
 .image-container-1 {
@@ -130,7 +142,655 @@
     filter:  brightness(100%) contrast(100%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
     mix-blend-mode: none;
 }
-  
-  
-  
-  
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-5 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-5::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: soft-light;
+    background: #3a00fa;
+    opacity: 0.5;
+}
+.image-container-5 > img {
+    -webkit-filter:  brightness(100%) contrast(107%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(165%) sepia(50%);
+    filter:  brightness(100%) contrast(107%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(165%) sepia(50%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-6 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-6::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: none;
+    background: #faaa00;
+    opacity: 0.13;
+}
+.image-container-6 > img {
+    -webkit-filter:  brightness(105%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(50%);
+    filter:  brightness(105%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(50%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-7 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-7::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: saturation;
+    background: #faaa00;
+    opacity: 1;
+}
+.image-container-7 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-8 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-8::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: hard-light;
+    background: #008efa;
+    opacity: 0.15;
+}
+.image-container-8 > img {
+    -webkit-filter:   contrast(128%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(120%) sepia(0%);
+    filter:   contrast(128%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(120%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-9 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-9::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: soft-light;
+    background: #574400;
+    opacity: 1;
+}
+.image-container-9 > img {
+    -webkit-filter:  brightness(105%) contrast(102%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(9%);
+    filter:  brightness(105%) contrast(102%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(9%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-10 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-10::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: none;
+    background: #faaa00;
+    opacity: 0.13;
+}
+.image-container-10 > img {
+    -webkit-filter:  brightness(105%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(50%);
+    filter:  brightness(105%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(50%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-11 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-11::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: saturation;
+    background: #faaa00;
+    opacity: 1;
+}
+.image-container-11 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-12 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-12::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: hard-light;
+    background: #fae500;
+    opacity: 0.2;
+}
+.image-container-12 > img {
+    -webkit-filter:  brightness(110%) contrast(114%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(122%) sepia(0%);
+    filter:  brightness(110%) contrast(114%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(122%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-13 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-13::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #00e1fa;
+    opacity: 0.5;
+}
+.image-container-13 > img {
+    -webkit-filter:  brightness(104%) contrast(104%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(122%) sepia(0%);
+    filter:  brightness(104%) contrast(104%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(122%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-14 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-14::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    background: #6be9ff;
+    opacity: 0.23;
+}
+.image-container-14 > img {
+    -webkit-filter:  brightness(110%) contrast(116%) grayscale(0%) hue-rotate(342deg) invert(0%) opacity(100%) saturate(84%) sepia(0%);
+    filter:  brightness(110%) contrast(116%) grayscale(0%) hue-rotate(342deg) invert(0%) opacity(100%) saturate(84%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-15 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-15::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #e3dca1;
+    opacity: 1;
+}
+.image-container-15 > img {
+    -webkit-filter:  brightness(100%) contrast(80%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(100%) contrast(80%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-16 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-16::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: hard-light;
+    background: #008efa;
+    opacity: 0.15;
+}
+.image-container-16 > img {
+    -webkit-filter:   contrast(128%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(120%) sepia(0%);
+    filter:   contrast(128%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(120%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-17 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-17::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: soft-light;
+    background: #574400;
+    opacity: 1;
+}
+.image-container-17 > img {
+    -webkit-filter:  brightness(105%) contrast(102%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(9%);
+    filter:  brightness(105%) contrast(102%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(9%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-18 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-18::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    background: #033dc5;
+    opacity: 1;
+}
+.image-container-18 > img {
+    -webkit-filter:   contrast(120%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:   contrast(120%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-19 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-19::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: darken;
+    background: #7d0000;
+    opacity: 0.1;
+}
+.image-container-19 > img {
+    -webkit-filter:  brightness(90%) contrast(125%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(50%);
+    filter:  brightness(90%) contrast(125%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(50%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-20 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-20::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: none;
+    background: #faaa00;
+    opacity: 0.13;
+}
+.image-container-20 > img {
+    -webkit-filter:   contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:   contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-21 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-21::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #fa00cc;
+    opacity: 0.5;
+}
+.image-container-21 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-22 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-22::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #00b309;
+    opacity: 1;
+}
+.image-container-22 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-23 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-23::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #faaa00;
+    opacity: 1;
+}
+.image-container-23 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(50%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-24 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-24::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #00ccfa;
+    opacity: 1;
+}
+.image-container-24 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(140%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-25 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-25::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #fa0000;
+    opacity: 1;
+}
+.image-container-25 > img {
+    -webkit-filter:  brightness(106%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(106%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-26 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-26::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #ffff00;
+    opacity: 1;
+}
+.image-container-26 > img {
+    -webkit-filter:  brightness(106%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(106%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-27 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ffffff;
+}
+.image-container-27::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: #002bff;
+    opacity: 0.76;
+}
+.image-container-27 > img {
+    -webkit-filter:  brightness(110%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(110%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-28 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #ff0000;
+}
+.image-container-28::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    background: #002b96;
+    opacity: 1;
+}
+.image-container-28 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: multiply;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-29 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #c4ba86;
+}
+.image-container-29::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    background: #f430a9;
+    opacity: 1;
+}
+.image-container-29 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: hard-light;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+.image-container-30 {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    background: #faaa00;
+}
+.image-container-30::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: none;
+    background: #faaa00;
+    opacity: 0.13;
+}
+.image-container-30 > img {
+    -webkit-filter:  brightness(100%) contrast(100%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    filter:  brightness(100%) contrast(100%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+    mix-blend-mode: darken;
+}
